@@ -12,7 +12,7 @@ import random
 
 url = "https://www.binance.com/bapi/earn/v1/friendly/pos/union?pageSize=50&pageIndex=1&status=ALL"
 # configure Telegram bot API token
-# api_token = ""
+api_token = <insert_api_token_here>
 bot = telegram.Bot(token=api_token)
 
 happy_emojis = [u'\U0001F642', u'\U0001F603', u'\U0001F600', u'\U0001F389', u'\U0001F38A']
@@ -20,7 +20,7 @@ sad_emojis = [u'\U0001F610', u'\U0001F615', u'\U0001F641']
 
 def greet_message(update, context):
         msg = "Welcome to Binance DeFi Staking alert bot"
-        msg += "\n\n === Designed by CryptoShine ==="
+        msg += "\n\n === Designed by c0d3inj3cT (aka CryptoShine) ==="
         msg += "\n\n Follow on Twitter @ CryptoShine"
         msg += "\n\nYou can use this bot to do the following:"
         msg += "\n\n1. Query the status of staking on Binance for a specific token"
@@ -63,8 +63,6 @@ def cmd_alert(update, context):
         token = context.args[0]
         user_id = str(update.effective_user.id)
 
-        #print(user_id)
-
         with open("alertdb", "r") as f:
             data = f.read()
 
@@ -84,8 +82,6 @@ def cmd_alert(update, context):
 
         with open("alertdb", "w") as f:
             json.dump(res, f)
-
-        #print("request to set an alert by user with id:{0} and username: {1}".format(update.effective_user.id, update.effective_user.username))
 
         return
 
@@ -118,10 +114,8 @@ def check_status(token_name):
         return results
 
 def monitor(upd):
-    #print(upd)
 
     while True:
-        #print("Checking for updates")
 
         with open("alertdb", "r") as f:
             data = f.read()
@@ -132,7 +126,6 @@ def monitor(upd):
 
         for token in res:
             latest = check_status(token)
-            #print(latest)
 
             previous = res[token]['state']
 
