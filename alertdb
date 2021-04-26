@@ -1,0 +1,117 @@
+{
+	"DOT":
+		{
+			"user_ids":[],
+			"state": {"DOT_30": 0, "DOT_60": 0, "DOT_90": 0}
+		},
+	"KSM":
+		{
+			"user_ids":[],
+			"state": {"KSM_30": 0, "KSM_60": 0, "KSM_90": 0}
+		},
+	"BNB":
+		{
+			"user_ids":[],
+			"state": {"BNB_90": 0, "BNB_60": 0, "BNB_30": 0}
+		},
+	"MIR":
+		{
+			"user_ids":[],
+			"state": {"MIR_90": 0, "MIR_60": 0, "MIR_30": 0, "MIR_15": 0}
+		},
+	"SOL":
+		{
+			"user_ids":[],
+			"state": {"SOL_15": 0, "SOL_30": 0, "SOL_90": 0, "SOL_60": 0}
+		},
+	"OGN":
+		{
+			"user_ids":[],
+			"state": {"OGN_90": 0, "OGN_60": 0, "OGN_30": 0, "OGN_15": 0}
+		},
+	"RAMP":
+		{
+			"user_ids":[],
+			"state": {"RAMP_60": 0, "RAMP_90": 0, "RAMP_30": 0, "RAMP_15": 0}
+		},
+	"FIL":
+		{
+			"user_ids":[],
+			"state": {"FIL_15": 0, "FIL_60": 0, "FIL_90": 0, "FIL_30": 0}
+		},
+	"1INCH":
+		{
+			"user_ids":[],
+			"state": {"1INCH_15": 0, "1INCH_30": 0, "1INCH_60": 0}
+		},
+	"AUCTION":
+		{
+			"user_ids":[],
+			"state": {"AUCTION_60": 0, "AUCTION_30": 0, "AUCTION_90": 0}
+		},
+	"ADA":
+		{
+			"user_ids":[],
+			"state": {"ADA_30": 0, "ADA_60": 0, "ADA_90": 0}
+		},
+	"EASY":
+		{
+			"user_ids":[],
+			"state": {"EASY_60": 0, "EASY_90": 0, "EASY_30": 0}
+		},
+	"BIFI":
+		{
+			"user_ids":[],
+			"state": {"BIFI_90": 0, "BIFI_30": 0, "BIFI_60": 0}
+		},
+	"IOTX":
+		{
+			"user_ids":[],
+			"state": {"IOTX_90": 0, "IOTX_30": 0, "IOTX_60": 0}
+		},
+	"CAKE":
+		{
+			"user_ids":[],
+			"state": {"CAKE_30": 0, "CAKE_60": 0, "CAKE_90": 0}
+		},
+	"BAKE":
+		{
+			"user_ids":[],
+			"state": {"BAKE_30": 0, "BAKE_90": 0, "BAKE_60": 0}
+		},
+	"NEAR":
+		{
+			"user_ids":[],
+			"state": {"NEAR_30": 0, "NEAR_60": 0, "NEAR_90": 0}
+		},
+	"MATIC":
+		{
+			"user_ids":[],
+			"state": {"MATIC_30": 0, "MATIC_90": 0, "MATIC_60": 0}
+		},
+	"EOS":
+		{
+			"user_ids":[],
+			"state": {"EOS_60": 0, "EOS_30": 0, "EOS_90": 0}
+		},
+	"ATOM":
+		{
+			"user_ids":[],
+			"state": {"ATOM_60": 0, "ATOM_30": 0, "ATOM_90": 0}
+		},
+	"ALGO":
+		{
+			"user_ids":[],
+			"state": {"ALGO_90": 0, "ALGO_60": 0, "ALGO_30": 0}
+		},
+	"TRX":
+		{
+			"user_ids":[],
+			"state": {"TRX_90": 0, "TRX_60": 0, "TRX_30": 0}
+		},
+	"IOST":
+		{
+			"user_ids":[],
+			"state": {"IOST_90": 0, "IOST_60": 0, "IOST_30": 0}
+		}
+}
