@@ -9,6 +9,7 @@ import threading
 from threading import Thread
 import telegram
 import random
+from urllib3.exceptions import ProtocolError
 
 url = "https://www.binance.com/bapi/earn/v1/friendly/pos/union?pageSize=50&pageIndex=1&status=ALL"
 # configure Telegram bot API token
@@ -88,8 +89,15 @@ def cmd_alert(update, context):
 def check_status(token_name):
         results = {}
         headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11.2; rv:88.0) Gecko/20100101 Firefox/88.0'}
-        res = requests.get(url, headers=headers)
+        
+        try:
+            res = requests.get(url, headers=headers)
+        except (ConnectionError, ProtocolError, ConnectionResetError) as e:
+            print("there was a connection error")
+            return results
+
         response = res.text
+
         try:
             data = json.loads(response)
         except json.decoder.JSONDecodeError:
@@ -130,6 +138,9 @@ def monitor(upd):
             previous = res[token]['state']
 
             for key in latest.keys():
+                if key not in previous:
+                    continue
+                
                 if latest[key] != previous[key]:
                     if latest[key] == 0:
                         status = "closed"
