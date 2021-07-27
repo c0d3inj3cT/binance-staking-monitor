@@ -92,8 +92,19 @@ def check_status(token_name):
         
         try:
             res = requests.get(url, headers=headers)
-        except (ConnectionError, ProtocolError, ConnectionResetError) as e:
-            print("there was a connection error")
+        except ConnectionResetError:
+            print("there was a connection reset error at {0}".format(tstamp))
+            print("delaying execution by 10 minutes")
+            time.sleep(600)
+            return results
+        except requests.exceptions.ConnectionError:
+            print("Connection error at {0}".format(tstamp))
+            print("delaying execution by 10 minutes")
+            time.sleep(600)
+            return results
+        except urllib3.exceptions.ProtocolError:
+            print("Protocol error at {0}".format(tstamp))
+            time.sleep(600)
             return results
 
         response = res.text
