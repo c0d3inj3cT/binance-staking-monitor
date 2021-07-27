@@ -43,7 +43,7 @@ def cmd_clear(update, context):
         res = json.loads(data)
 
         for token_name in res:
-            if token_name == token:
+            if token_name.lower() == token.lower():
                 ids = res[token_name]['user_ids']
                 if user_id not in ids:
                     msg = "you have not yet set an alert for this token"
@@ -70,7 +70,7 @@ def cmd_alert(update, context):
         res = json.loads(data)
 
         for token_name in res:
-                if token_name == token:
+                if token_name.lower() == token.lower():
                     ids = res[token_name]['user_ids']
                     if user_id in ids:
                         msg = "you have already set an alert for token: " + token
@@ -117,7 +117,7 @@ def check_status(token_name):
             return results
 
         for i in range(len(data["data"])):
-            if data["data"][i]["asset"] == token_name:
+            if data["data"][i]["asset"].lower() == token_name.lower():
                 projects = data["data"][i]["projects"]
                 for j in range(len(projects)):
                     project_name = projects[j]['projectId']
